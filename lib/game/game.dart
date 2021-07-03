@@ -280,10 +280,6 @@ class SpacescapeGame extends BaseGame
     _player.reset();
     _enemyManager.reset();
 
-    // Now remove all the enemies and bullets from
-    // game world. Note that, we are not calling
-    // Enemy.destroy() because it will unnecessarily
-    // run explosion effect and increase players score.
     components.whereType<Enemy>().forEach((enemy) {
       enemy.remove();
     });
